@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Fill-Form Extension",
+  "version": "1.0",
+  "description": "A simple extension to fill out forms automatically.",
+  "permissions": ["sidePanel", "activeTab", "scripting"],
+  "side_panel": {
+    "default_path": "side-panel/sidePanel.html"
+  },
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_title": "Click to open panel"
+  }
+}
