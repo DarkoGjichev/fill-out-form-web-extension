@@ -1,6 +1,7 @@
 import { fetchUsers } from "./api/fetchUsers.js";
 import injectData from "./utils/injectData.js";
 import renderUserDetails from "./utils/renderUserDetails.js";
+import { sendToCRM } from "./api/sendToCRM.js";
 
 const fetchButton = document.getElementById("fetchUsersButton");
 const dataStatus = document.getElementById("dataStatus");
@@ -21,7 +22,9 @@ fetchButton.addEventListener("click", async () => {
       dataList.appendChild(listItem);
 
       const button = listItem.querySelector(".fillButton");
+      const sendToCRMButton = listItem.querySelector(".sendToCRM");
       button.addEventListener("click", () => fillForm(user));
+      sendToCRMButton.addEventListener("click", () => sendToCRM(user));
     });
   } catch (error) {
     dataStatus.textContent = `Error: ${error.message}`;
