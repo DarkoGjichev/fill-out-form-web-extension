@@ -1,3 +1,5 @@
+import transformUserData from "../utils/transformUserData.js";
+
 export async function fetchUsers() {
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -7,17 +9,7 @@ export async function fetchUsers() {
     }
 
     const users = await response.json();
-    return users.map((user) => ({
-      fullName: user.name,
-      username: user.username,
-      email: user.email,
-      phone: user.phone,
-      website: user.website,
-      company: user.company?.name,
-      address: user.address?.street,
-      city: user.address?.city,
-      postcode: user.address?.zipcode,
-    }));
+    return users.map((user) => transformUserData(user));
   } catch (error) {
     throw error;
   }
