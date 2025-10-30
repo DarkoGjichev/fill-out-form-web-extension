@@ -1,4 +1,5 @@
 import { fetchUsers } from "./api/fetchUsers.js";
+import renderUserDetails from "./utils/renderUserDetails.js";
 
 const fetchButton = document.getElementById("fetchUsersButton");
 const dataStatus = document.getElementById("dataStatus");
@@ -14,7 +15,7 @@ fetchButton.addEventListener("click", async () => {
 
     users.forEach((user) => {
       const listItem = document.createElement("li");
-      listItem.innerHTML = `<h3>${user.name}</h3><p>Email: ${user.email}</p>`;
+      listItem.innerHTML = renderUserDetails(user);
       dataList.appendChild(listItem);
     });
   } catch (error) {
