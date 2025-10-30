@@ -7,6 +7,6 @@ export default function renderUserDetails(user) {
         <p><strong>Website:</strong> <a href="https://${user.website}" target="_blank">${user.website}</a></p>
         <p><strong>Company:</strong> ${user.company.name}</p>
         <p><strong>Address:</strong> ${user.address.street}, ${user.address.city}, ${user.address.zipcode}</p>
-        <button type="button">Fill form</button>
+        <button type="button" class="fillButton">Fill form</button>
       `;
 }

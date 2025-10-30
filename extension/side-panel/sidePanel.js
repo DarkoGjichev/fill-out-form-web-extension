@@ -1,4 +1,5 @@
 import { fetchUsers } from "./api/fetchUsers.js";
+import injectData from "./utils/injectData.js";
 import renderUserDetails from "./utils/renderUserDetails.js";
 
 const fetchButton = document.getElementById("fetchUsersButton");
@@ -18,8 +19,22 @@ fetchButton.addEventListener("click", async () => {
       listItem.className = "data_list--item";
       listItem.innerHTML = renderUserDetails(user);
       dataList.appendChild(listItem);
+
+      const button = listItem.querySelector(".fillButton");
+      button.addEventListener("click", () => fillForm(user));
     });
   } catch (error) {
     dataStatus.textContent = `Error: ${error.message}`;
   }
 });
+
+async function fillForm(user) {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  if (!tab) return;
+
+  await chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    func: injectData,
+    args: [user],
+  });
+}
