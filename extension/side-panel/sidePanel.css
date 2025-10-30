@@ -1,0 +1,20 @@
+.main_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.button--primary {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #406dea;
+  border: 1px solid #406dea;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.text--state {
+  font-size: 1.125rem;
+  text-align: center;
+}
