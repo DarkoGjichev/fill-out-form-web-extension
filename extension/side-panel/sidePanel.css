@@ -49,3 +49,20 @@
   margin-bottom: 0;
   font-size: 0.875rem;
 }
+
+.data_list--item button {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #406dea;
+  background-color: #fff;
+  border: 1px solid #406dea;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.data_list--item button:hover {
+  color: #fff;
+  background-color: #406dea;
+}
