@@ -12,6 +12,11 @@ export async function sendToCRM(client) {
       alert("Failed to send data to CRM");
     }
   } catch (error) {
+    if (error.message === "Failed to fetch") {
+      alert(
+        "Please make sure that the server is running on http://localhost:5000"
+      );
+    }
     throw error;
   }
 }
