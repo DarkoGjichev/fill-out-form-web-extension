@@ -8,5 +8,6 @@ export default function renderUserDetails(user) {
         <p><strong>Company:</strong> ${user.company}</p>
         <p><strong>Address:</strong> ${user.address}, ${user.city}, ${user.postcode}</p>
         <button type="button" class="fillButton">Fill form</button>
+        <button type="button" class="sendToCRM">Send to CRM</button>
       `;
 }
