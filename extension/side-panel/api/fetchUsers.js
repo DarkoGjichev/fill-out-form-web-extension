@@ -7,7 +7,17 @@ export async function fetchUsers() {
     }
 
     const users = await response.json();
-    return users;
+    return users.map((user) => ({
+      fullName: user.name,
+      username: user.username,
+      email: user.email,
+      phone: user.phone,
+      website: user.website,
+      company: user.company?.name,
+      address: user.address?.street,
+      city: user.address?.city,
+      postcode: user.address?.zipcode,
+    }));
   } catch (error) {
     throw error;
   }
