@@ -77,7 +77,7 @@ is transformed into :
 
 1. Load the extension
 
-   - Follow instructions from readme file inside extension folder
+   - Follow instructions from [extension/README.md](./extension/README.md).
 
 2. Open the demo form
 
@@ -96,3 +96,9 @@ is transformed into :
    - Make sure the **demo form tab** is the active tab
    - In the side panel, click **Fill Form** on any user
    - The form fields will populate automatically
+
+## Backend API Integration
+
+A lightweight Node/Express server receives and logs client data when you click **Send to CRM** in the side panel.
+
+To run the server, follow the instructions in [server/README.md](./server/README.md).
