@@ -15,6 +15,7 @@ fetchButton.addEventListener("click", async () => {
 
     users.forEach((user) => {
       const listItem = document.createElement("li");
+      listItem.className = "data_list--item";
       listItem.innerHTML = renderUserDetails(user);
       dataList.appendChild(listItem);
     });

@@ -27,3 +27,25 @@
   margin: 0;
   list-style: none;
 }
+
+.data_list--item {
+  padding: 1rem;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+}
+
+.data_list--item:hover {
+  border: 1px solid #406dea;
+}
+
+.data_list--item h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem;
+}
+
+.data_list--item p {
+  margin-bottom: 0;
+  font-size: 0.875rem;
+}
