@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sidePanel.css">
+    <script type="module" src="sidePanel.js" defer></script>
     <title>Side Panel</title>
 </head>
 
 <body>
     <main class="main_container">
-        <button class="button--primary" type="button">Fetch Data</button>
+        <button class="button--primary" id="fetchUsersButton" type="button">Fetch Data</button>
 
         <section>
-            <p class="text--state">No data yet. To generate a list of users click on the button above</p>
+            <p class="text--state" id="dataStatus">No data yet. To generate a list of users click on the button above
+            </p>
             <ul class="data_list"></ul>
         </section>
     </main>
